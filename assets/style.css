@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    background: #01000c;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.playerbody {
+    max-width: 450px;
+    height: 600px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border: 1px solid #03701D;
+    box-shadow: 1px 3px 2px #03701D;
+    border-radius: 20%;
+}
+
+.player {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5em;
+    color: #EEE;
+}
+
+.cover {
+    width: 12em;
+    border: .8em #011304 solid;
+    border-radius: 50%;
+    box-shadow: .4em .4em 1em #043810,
+        -.4em -.4em .6em #184b24;
+}
+
+h1 {
+    margin: 1em 0 0.3em 0;
+    font-size: 1em;
+}
+
+span {
+    font-size: .8em;
+    color: #8C8F90;
+}
+
+small {
+    color: #8C8F90;
+}
+
+i {
+    color: #031108;
+}
+
+.timeline-slider {
+    margin: 2em auto;
+    max-width: 30em;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.range-slider {
+    margin-top: .4em;
+    position: relative;
+    display: flex;
+    user-select: none;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: .4em;
+    outline: none;
+    border-radius: 3px;
+    background: #1F1F1F;
+    box-shadow: inset 3px 3px 6px #000 1px 1px 1px #909090;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.7em;
+    height: 1.7em;
+    z-index: 3;
+    position: relative;
+}
+
+.timeline-slider .slider-thumb {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: #111;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.timeline-slider .slider-thumb::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: .4em;
+    height: .4em;
+    background: #333;
+    border-radius: inherit;
+    transition: .3s;
+}
+
+.timeline-slider .range-slider:hover .slider-thumb::before {
+    background: #07F03D;
+}
+
+.progress {
+    width: 50%;
+    height: .4em;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #122400, #407909, #0eff00);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    pointer-events: none;
+}
+
+.volume-slider {
+    max-width: 8em;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume-slider .slider::-webkit-slider-thumb {
+    width: 0;
+}
+
+.volume-icon {
+    margin: 0 .5em;
+    cursor: pointer;
+}
+
+.volume-icon i {
+    font-size: .8em;
+    padding-top: .2em;
+    color: #8C8F90;
+}
+
+.btn {
+    background: linear-gradient(-60deg, #122400, #0eff00, #407909);
+    border: none;
+    box-shadow: .3em .3em .8em #021a08, -.3em -.3em .5em #0b1a0fc9;
+    width: 2.2em;
+    height: 2.2em;
+    font-size: 1.5em;
+    border: .2em #1C2023 solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(60deg, #122400,
+            #0eff00,
+            #407909);
+}
+
+.btn-main {
+    background: linear-gradient(-60deg, #122400, #0eff00, #407909);
+    font-size: 1.8em;
+}
+
+.btn-main:hover {
+    background: linear-gradient(60deg, #122400,
+            #0eff00,
+            #407909);
+}
+
+.btn-main i {
+    color: #031108;
+}
+
+.controls .btn {
+    margin: .2em;
+}
+
+
+@media screen and (max-width:700px) {
+    .range-slider {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .playerbody {
+        height: 100vh;
+    }
+
+    .cover{
+        width: 9em;
+        border: .5em #011304 solid;
+    }
+
+    h1{
+        font-size: .7em;
+    }
+
+    span{
+        font-size: .6em;
+    }
+
+    small{
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width:320px){
+    .playerbody {
+            height: 500px;
+        }
+    .btn{
+        width: 2em;
+        height: 2em;
+        font-size: 1.4em;
+    }
+
+    .btn-main{
+        font-size: 1.6em;
+    }
+}

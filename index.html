@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>playMusic2</title>
+</head>
+
+<body>
+    <div class="playerbody">
+        <div class="player">
+            <img src="/assets/img/5aseco.jpg" alt="cover" class="cover">
+            <h1 class="track-title">Vem e Vai</h1>
+            <span class="artist-name">5 a Seco</span>
+            <div class="timeline-slider">
+                <div class="timeline">
+                    <small class="time">0:00</small>
+                    <small class="fulltime">3:01</small>
+                </div>
+                <div class="range-slider">
+                    <input type="range" min="0" max="100" value="0" class="slider">
+                    <div class="slider-thumb"></div>
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="volume-slider">
+                <div class="volume-icon">
+                    <i class="fa-solid fa-volume-high material-symbols-outlined"></i>
+                </div>
+                <div class="range-slider">
+                    <input type="range" min="0" max="100" value="50" class="slider">
+                    <div class="progress"></div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="btn" id="bntPrev">
+                    <i class="fa-solid fa-backward-step material-symbols-outlined"></i>
+                </button>
+                <button class="btn btn-main" id="mainPlayBtn">
+                    <i class="fa-solid fa-circle-play material-symbols-outlined"></i>
+                </button>
+                <button class="btn" id="btnNext">
+                    <i class="fa-solid fa-forward-step material-symbols-outlined"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio" hidden>
+        <source src="/assets/musicas/5 a Seco - Vem e Vai.mp3">
+    </audio>
+
+    <script src="/assets/script.js"></script>
+    <script src="https://kit.fontawesome.com/8837169d94.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
