@@ -210,6 +210,7 @@ i {
 @media screen and (max-width:425px) {
     .playerbody {
         height: 480px;
+        margin: auto;
     }
 
     .cover{
