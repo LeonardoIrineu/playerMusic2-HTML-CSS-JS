@@ -209,7 +209,7 @@ i {
 
 @media screen and (max-width:425px) {
     .playerbody {
-        height: 100vh;
+        height: 480px;
     }
 
     .cover{
@@ -231,9 +231,6 @@ i {
 }
 
 @media screen and (max-width:320px){
-    .playerbody {
-            height: 500px;
-        }
     .btn{
         width: 2em;
         height: 2em;
